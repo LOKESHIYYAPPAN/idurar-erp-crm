@@ -11,11 +11,13 @@ const coreDownloadRouter = require('./routes/coreRoutes/coreDownloadRouter');
 const corePublicRouter = require('./routes/coreRoutes/corePublicRouter');
 const adminAuth = require('./controllers/coreControllers/adminAuth');
 const queryRouter = require("./routes/appRoutes/queryRoutes");
+const geminiRouter = require("./routes/appRoutes/geminiApi");
 
 const errorHandlers = require('./handlers/errorHandlers');
 const erpApiRouter = require('./routes/appRoutes/appApi');
 
 const fileUpload = require('express-fileupload');
+
 // create our Express app
 const app = express();
 
@@ -38,6 +40,7 @@ app.use(compression());
 // Here our API Routes
 
 app.use('/api/queries', queryRouter);
+app.use('/api/ai', geminiRouter);
 app.use('/api', coreAuthRouter);
 app.use('/api', adminAuth.isValidAuthToken, coreApiRouter);
 app.use('/api', adminAuth.isValidAuthToken, erpApiRouter);
