@@ -102,3 +102,5 @@ IDURAR is Free Open Source Released under the GNU Affero General Public License 
 
 
 refer the sceen-shot folder 
+
+view link: https://drive.google.com/file/d/17cnOeJuWr9ipz_h7Qk6Uy7ssSkFMH6gz/view?usp=drive_link
